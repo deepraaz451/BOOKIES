@@ -25,7 +25,10 @@ SECRET_KEY = '4c!5dmr29c&9d(5#ekg%51_0b+5-pagr!&i((1==-5zoz$h^8^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "bookies-1-y933.onrender.com",
+    "127.0.0.1",  # Keep localhost for local testing
+]
 
 
 # Application definition
